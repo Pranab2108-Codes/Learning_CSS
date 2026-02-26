@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <style>
+
+            *{                                         /* This is the Universal selector. */
+
+                padding: 0px;                          /* This is the layer which is lies between the border and content. */
+                margin: 0px;                           /* This is the layer which is cover the border from outside. */
+
+            }
+
+            .para1{
+
+                background-color: aqua;
+                border: solid red 20px;
+
+                width: 150px;
+                height: 150px;
+
+                padding: 50px;                         /* Through this we can set padding for all 4 sides at once. */
+                margin: 90px;                          /* Through this we can set margin for all 4 sides at once. */
+
+            }
+
+            .para2{
+
+                background-color: blue;
+                border: inset yellowgreen 30px;
+
+                width: 150px;
+                height: 180px;
+
+                padding-left: 9px;                     /* Through this we can set padding of each 4 sides individually like left , top , right and bottom. */
+                padding-top: 3px;
+                padding-right: 15px;
+                padding-bottom: 7px;
+
+                margin-left: 40px;                     /* Here we are setting the margin of each 4 sides individually like left , top , right and bottom. */
+                margin-top: 32px;
+                margin-right: 13px;
+                margin-bottom: 29px;
+
+            }
+
+            .para3{
+
+                background-color: blueviolet;
+                border:double yellow 45px;
+
+                width: 350px;
+                height: 100px;
+
+                padding: 11px 37px 99px 69px;          /* Here we can set the padding by using shorthand notation for all 4 sides at once as well as with different padding for each sides. Here the first pixel denote the top side and then it will move clock wise. */
+                margin: 77px 82px 20px 47px;           /* Here we can set the margin by using shorthand notation for all 4 sides at once as well as with different margin for each sides. Here the first pixel denote the top side and then it will move clock wise. */
+            }
+
+            .para4{
+
+                background-color: coral;
+                border:groove greenyellow 15px;
+
+                width: 300px;
+                height: 150px;
+
+                padding: 35px 27px;                    /* Here we can set the padding 4 sides at once but first pixel will denote the top and bottom side pairly and the next one is for left and right pairly. */
+                margin: 18px 42px;                     /* Here we can set the margin 4 sides at once but first pixel will denote the top and bottom side pairly and the next one is for left and right pairly. */
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nam exercitationem rem in error aliquam nisi numquam deserunt voluptatum aliquid?</p>
+        <p class="para2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet, iusto.</p>
+        <p class="para3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet velit consequatur vel rem ad atque sequi reprehenderit exercitationem minima aliquid mollitia iusto fuga quos molestias totam, voluptas nihil doloremque maxime!</p>
+        <p class="para4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis quisquam id architecto est fugiat.</p>
+
+    </body>
+
+</html>
