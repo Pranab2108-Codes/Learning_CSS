@@ -13,23 +13,23 @@
             }                                           /* Because in inline elements the content's size is not fix, means as we know the width and height not going to be affected in inline. */
 
             .box{
-
+                                                        /* Inline elements try to make in same line if there will be spaces available. */
                 display: inline;                        /* Here as we have mentioned this div or block element as inline element here the width and height not going to be same as we written there. */
-                width: 300px;                           /* Get ignored. */
-                height: 100px;                          /* Get ignored. */
+                width: 300px;                           /* Get ignored so cant be customize. */
+                height: 100px;                          /* Get ignored so cant be customize. */
                 border: solid black 5px;                /* Border will render. */
                 padding: 50px;                          /* Padding also going to be apply. */ 
-                margin: 40px;                           /* Margin will be also visible but only by horizontally because of the inline element. */
+                margin: 40px;                           /* Margin will be also visible but only by horizontally because of the inline element so vertically it wont work. */
 
             }
 
             span{
 
-                display: block;                         /* All the border, padding and margin can be applyed. */
+                display: block;                         /* All the border, padding and margin can be applied. */
                 border: inset green 9px; 
                 width: 300px;                           /* After the border-sizing the width and height not going to change, even after we apply the padding and margin. */
-                height: 150px;
-                padding: 60px;
+                height: 150px;                          /* Here we can customize the width and height. */
+                padding: 60px;                          /* Here padding and margin can be applied from all 4 directions or sides. */
                 margin: 7px;
                 
             }
