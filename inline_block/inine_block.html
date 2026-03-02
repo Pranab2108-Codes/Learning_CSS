@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html >
+
+    <head>
+
+        <style>
+
+            *{ 
+
+                box-sizing: border-box;                                /* Because of border-sizing the box soze will be the content size. */
+
+            } 
+
+            .span2,.box{
+
+                display: inline-block;                                 /* It wont take the full length means still acting like an inline element from outside but act as block from inside. */
+                border: inset green 15px;
+                width: 300px;                                          /* It wont ignore the width and height. */
+                height: 150px;
+                padding: 60px;                                         /* Even after the padding and margin applied the box size will be the same as content size. */
+                margin: 53px;
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+    
+     <span class="span2">so let's check</span> 
+     <div class="box">now is the time.</div>
+
+    </body>
+
+</html>
