@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>   
+    
+        <style>
+
+            p{                                                                      /* This is the style of the internal CSS. */
+
+                background-color: brown  ; 
+
+            }
+
+            h1{
+
+                color:greenyellow;
+
+            }
+
+        </style>
+   
+        <link rel="stylesheet" href="newCSS.css" >                                  <!-- This is the external CSS technique, above there is internal CSS but as per the order this external is below of internal so this external will win. -->
+   
+    </head>
+
+    <body>
+
+        <h1>Welcome to my World.</h1>
+
+        <p style="background-color: yellow;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium animi rerum, possimus deleniti eius ipsa laboriosam libero veniam consectetur.</p>
+                                                                                    <!-- This is the inline CSS technique even after we are applying brown through internal CSS this paragraph got yellow so here inline win. -->
+        <br><br>
+
+        <p style="color: brown;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium molestiae harum, aliquid voluptate quod quasi fugiat non, accusantium excepturi porro ad eius assumenda soluta! Ducimus provident harum obcaecati reiciendis.</p>
+
+        <br><br>
+
+        <p style="background-color: blueviolet;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil ex vitae quae corrupti officiis repellat quos blanditiis ut aperiam, earum dolor perferendis eos rerum excepturi hic voluptas, sapiente incidunt. Commodi laudantium magnam corporis illum, culpa vel tenetur sunt qui ad repellendus mollitia dolore eos, cupiditate enim dignissimos obcaecati expedita!</p>
+                                                                                    <!-- Among all these three the priority always be high of inline. -->
+        <br><br>                                                                    <!-- The priority of internal and external is same so the order matters here. -->
+    
+        <footer>I am the footer.</footer>
+
+    </body>
+    
+</html> 
+
