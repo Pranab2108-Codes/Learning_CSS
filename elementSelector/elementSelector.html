@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+   
+    <style>
+
+        p{                                                               /* Here we are selecting the element by the tag. */
+
+            background-color: brown; 
+
+        }
+        
+        #article1{                                                       /* Here we are selecting the element by ID, so we have to start with '#' which indicate , it is an ID. */
+
+        background-color: grey;
+        background-color: blue;
+
+        }
+
+        .para{                                                           /* Now here we are selecting the element by class, so we have to start with '.'(dot) which indicate , it is a class. */
+
+            background-color: blue;
+            background-color: yellow;
+            background-color: violet;
+
+        }
+        
+        p,article{                                                       /* We call this is as group selector, where we can select multiple elements, all at once. */
+                                                                         /* Similarly we can select multiple elements of class or ID and both also. */
+            width:500px;
+            background-color: aqua;
+            
+        }
+
+        p.para{                                                          /* Here this means we are selecting a class name as "para" of "paragraph" tag. */
+
+            text-align: center;
+
+        }
+
+        article#article1{                                                /* Here it describe that we are selecting an element whose ID is "article1" of "article" tag. */
+
+            background-color: chartreuse;
+
+        }
+    
+    </style>
+
+    </head>
+
+    <body>
+
+        <h1>Hello this is my world.</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam accusantium animi rerum, possimus deleniti eius ipsa laboriosam libero veniam consectetur.</p>
+
+        <br><br>
+
+        <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe laudantium molestiae harum, aliquid voluptate quod quasi fugiat non, accusantium excepturi porro ad eius assumenda soluta! Ducimus provident harum obcaecati reiciendis.</p>
+
+        <br><br>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea nihil ex vitae quae corrupti officiis repellat quos blanditiis ut aperiam, earum dolor perferendis eos rerum excepturi hic voluptas, sapiente incidunt. Commodi laudantium magnam corporis illum, culpa vel tenetur sunt qui ad repellendus mollitia dolore eos, cupiditate enim dignissimos obcaecati expedita!</p>
+
+    
+        <br><br>
+
+        <article id="article1" class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi possimus nam illum quos voluptates sunt beatae exercitationem sint, a facilis. Vel fugiat nihil quod enim iste voluptatum. Similique, harum qui sunt, voluptates earum consequatur eum quasi deleniti illum libero id.</article>
+        
+        <br><br>
+        <article>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste?</article>
+
+        <br>
+    
+    </body>
+    
+</html>
