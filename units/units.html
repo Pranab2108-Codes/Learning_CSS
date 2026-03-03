@@ -8,14 +8,14 @@
 
             .box{
 
-                border: solid red 12px;         /* Because of font size 2em in below .box the font size will be 2(em)*16 = 32px (parent's font size), here the parent is body so by default it is 16. */
+                border: solid red 12px;           /* Because of font size 2em in below .box the font size will be 2(em)*16 = 32px (parent's font size), here the parent is body so by default it is 16. */
                 width: 53%;                       /* The class box was for the div element or it is a block element, It was taking full width so after applying this it take 53% of the full width or 100%, indicating that it is taking 53% width of the parent width , in parent there is body only so it was taking 53% width from body width. */
             
             } 
 
             .parent{  
 
-                border: inset green 3px;        /* Here parent is a class which is a div element. */
+                border: inset green 3px;          /* Here parent is a class which is a div element. */
                 background-color: blueviolet;
                 width: 50%;                       /* Here it took 50% width of parent width only, parent was body. */
 
@@ -23,8 +23,8 @@
 
             .child{                               /* Here child is also a class name which is a div element and comes inside of another div tag whose class is parent. */
 
-                border: dotted yellow 5px;      /* Here it is taking 30% of width from the parent's width. */
-                background-color: blue;         /* Here the background color blue got overlap on background color bluevoilet. */
+                border: dotted yellow 5px;        /* Here it is taking 30% of width from the parent's width. */
+                background-color: blue;           /* Here the background color blue got overlap on background color bluevoilet. */
                 width: 30%;                       /* Taking 30% from the parent 's width means here parent was in blue voilet color */
 
             }
