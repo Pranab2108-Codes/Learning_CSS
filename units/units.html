@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <style>
+
+            .box{
+
+                border: solid red 12px;         /* Because of font size 2em in below .box the font size will be 2(em)*16 = 32px (parent's font size), here the parent is body so by default it is 16. */
+                width: 53%;                       /* The class box was for the div element or it is a block element, It was taking full width so after applying this it take 53% of the full width or 100%, indicating that it is taking 53% width of the parent width , in parent there is body only so it was taking 53% width from body width. */
+            
+            } 
+
+            .parent{  
+
+                border: inset green 3px;        /* Here parent is a class which is a div element. */
+                background-color: blueviolet;
+                width: 50%;                       /* Here it took 50% width of parent width only, parent was body. */
+
+            }  
+
+            .child{                               /* Here child is also a class name which is a div element and comes inside of another div tag whose class is parent. */
+
+                border: dotted yellow 5px;      /* Here it is taking 30% of width from the parent's width. */
+                background-color: blue;         /* Here the background color blue got overlap on background color bluevoilet. */
+                width: 30%;                       /* Taking 30% from the parent 's width means here parent was in blue voilet color */
+
+            }
+
+            .container{                           /* Here also because of font size 24px in below .container, the font size became 24px. */
+
+                border: dashed aquamarine 5px;
+                background-color: beige;
+                width: 61vw;                      /* Viewport's width(vw), viewport means entire window, the entire window is 100vw, here we are taking 61vw from 100vw. */
+                height: 23vh;                     /* Viewport's height(vh), the entire window is 100vh here we are taking 47vh from 100vh. */
+        
+            }
+            .container{
+
+                font-size: 24px;
+
+            }
+            .box{
+
+                font-size: 2em;                   /* Because of the parent's font size which is the container is 24px it got multiply 24*2(em) = 48px. */ 
+                padding: 1em;                     /* Width/height, padding and margin these can be apply by element's own font size not from the parent's font size so 1*2em(box)*24px(container) = 48 padding. */
+
+            }
+
+            .firstpara{
+
+                border: solid yellow 3px;
+                font-size: 5rem;                  /* Here it apply rem by root element's font size which is html bydefault as we know it is 16px so 16*5rem = 80px. */
+                margin: 4rem;                     /* As we know for rem it take the root element's margin and then multiply with rem, bydefault the root element's or html's margin is 16px, so 16*4(rem) = 64 margin. */
+                
+            }  
+        
+        </style> 
+
+    </head>
+
+    <body>
+    
+        <div class="box"> Welcome to this world.</div>
+
+        <div class="parent">
+            <div class="child">
+                This is the child of this parent.
+            </div>
+        </div>
+
+        <div class="container">welcome to pranab world</div>
+
+    
+        <div class="container">
+            hey
+            <br><br><br><br><br><br><br>
+            <div class="box">
+                welcome to  party.
+            </div>
+        </div>
+
+        <br><br><br><br><br><br><br><br><br><br>
+        <p class="firstpara">This is the first paragraph</p>
+
+    </body>
+
+</html>
