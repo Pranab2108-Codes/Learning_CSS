@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* .box{
+            height: 500px;
+            width: 500px;
+            background-color: aqua;
+            border: solid black 3px;
+        } */
+        /* @media (min-width: 500px){.  after it will cross 500px it will change the color aqua to blue.
+            .box{
+                background-color: blue;
+            }
+        } */
+        /* @media (max-width: 700px){       Here it means after it will shrink <700px then it will change the color aqua to yello
+            .box{
+                background-color: greenyellow;
+            }
+         } /* 
+
+        /*@media (min-width:400px) and (max-width:500px){          Range 
+            .box{
+                background-color: brown;
+            }
+        }*/
+
+        /* .container{
+            background-color: blueviolet;
+            border: solid black 5px;
+            padding: 2px;
+            margin: 2px;
+            display: flex;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            border: solid burlywood 2px;
+            padding: 2px;
+            margin: 2px;
+        }
+        #box1{
+            background-color: aqua;
+            
+
+        }
+        #box2{
+            background-color: blue;
+            
+        }
+        #box3{
+            background-color: orange;
+            
+        }
+        #box4{
+            background-color: brown;
+            
+        }
+        @media (min-width:640px){
+            .container{
+                flex-direction: row;
+            }
+        }
+         @media (max-width:640px){
+            .container{
+                flex-direction: column;
+            }
+        } */
+        .container{
+            border: solid black 2px;
+            background-color: greenyellow;
+            display: flex;
+            flex-direction: row;
+            width: 450px;
+        }
+        #box1{
+            background-color: aquamarine;
+            border: solid brown 2px;
+            width: 47%;
+            padding: 3px;
+            margin: 2px;
+            display: flex;
+            flex-direction: column;
+        }
+        #box2{
+            background-color: blue;
+            border: solid red 2px;
+            width: 47%;
+            padding: 3px;
+            margin: 2px;
+        }
+        p{
+            border: solid blueviolet 2px;
+        }
+        @media (max-width:640px){
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="box"> Hello Las Vegas</div> -->
+
+    <!-- <div class="container">
+        <div class="box" id="box1">A</div>
+        <div class="box" id="box2">B</div>
+        <div class="box" id="box3">C</div>
+        <div class="box" id="box4">D</div>
+    </div> -->
+
+    <div class="container">
+        <div id="box1">
+            <p>Text1</p>
+            <p>Text2</p>
+        </div>
+
+        <div id="box2">
+            <img src="cheetha.png" alt="Click Here to see cheetha" width="200px" height="200px">
+        </div>
+    </div>
+</body>
+</html>
