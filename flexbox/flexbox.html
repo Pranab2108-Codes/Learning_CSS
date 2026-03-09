@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <style>
+
+            .container{
+
+                background-color: beige;
+                border: solid black 5px;
+                display: flex;                                           /* By doing this display as flex all the items of the container become flex items, Bydefault flex direction is row wise, means all the flex items will be in side by side in one row. */
+                flex-direction: row;                                     /* All the boxes will be placed in side by side, means in a single row. */
+                flex-wrap: wrap;                                         /* While shrinking the dimension if there will be no spaces, then items would go to the next line, so while coming back to it's original dimension there would be spaces so items will go to it's original place same as they were earlier. */
+                flex-wrap: wrap-reverse;                                 /* In this wrap-reverse the last element will go at 1st position in 1st row and other will go down and join in 2nd row while shrinking, if we do further compression then the last element of 2nd row will join at the 1st position of 1st row and so on. */
+                                                                         /* in flex-direction : row, the main axis is horizontal axis in coloumn the main exis is vertical axis. */
+                width: 600px;
+                height:600px ;
+                justify-content: start;                                  /* As we have done our main-axis is horizontal because of flex-direction: row the content will plcae at start, means at the top of the horizontal axis, bydefault it stay in there. */
+                justify-content: center;                                 /* It means the items will be in a row but at the center of the main axis or horizontal axis. */
+                justify-content: end;                                    /* Here it states that the items will be in a row but at the end of the main axis or horizontal axis. */
+                flex-direction: column;                                  /* Now the main axis is vertical axis, so we can say that the items will be appear in a column.  */
+                
+                justify-content: space-between;                          /* No space at the edges, space only between elements. */
+                justify-content: space-around;                           /* Equal space around each item, But edge space is half of the inner space. */
+                justify-content: space-evenly;                           /* Equal space everywhere, same space between items and also at the edges. */
+
+                align-items: start;                                      /* Bydefault the alignment means vertical axis, because bydefault flex-direction is row. */
+                align-items: center;                                     /* Here it means the items will be at the center of vertical axis. */
+                align-items: end;                                        /* By doing this the items will place at the end of the vertical axis. */
+                align-items: stretch;                                    /* If we will remove the height of the each box then it can be stretch and bydefault our items always stay as stretch, and important is the items should be at start then only these items can get stretch. */
+
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;                                 /* Now we can see so many spaces in between, which can be fill by using align-content. */
+                align-items: end;
+                /* align-content: start;                                    After shrinking all the items will be places on top of the vertical axis. */
+                /* align-content: end;                                      Here after shrinking the elements/items will be placed on the end of the vertical axis. */
+                /* align-content: center;                                   It only helpful when the flex wrap is on and while shrinking it is creating multiple lines in between, here even after doing the shrinking all the items are placing it self at middle/center. */
+
+            } 
+
+            .box{
+
+                border: solid brown 2px;
+                width: 50px;
+                height: 80px;
+                padding: 2px;
+                margin: 2px;
+
+            }
+
+            #box1{
+
+                background-color: aqua;
+                order: 500;                                              /* Now this aqua box is going to be in last, because of this order : 500. */
+                flex-shrink: 4;                                          /* 1st we had to off the wrap then we can see the aqua box is getting shrink 4 times faster than other boxes. */
+                flex-grow: 2;                                            /* When we extend our dimension to back of it's original shape it will extend 2 times faster than other boxes. */
+                align-self: end;                                         /* We can set each box to be align as we want, either at start, center, or at end. */
+                
+            }
+
+            #box2{
+                
+                background-color: blue;
+                flex-grow: 1;                                            /* After doing the flex grow on each box it took all width we can see. */
+                
+            }
+            #box3{
+
+                background-color: orange;
+                flex-grow: 1;
+                align-self: center;
+            }
+
+            #box4{
+
+                background-color: brown;
+                order: -1;                                               /* Now box 4 got in first, because of order : -1. */
+                flex-grow: 1;
+                flex-basis: 100px;                                       /* width of this brown bx got increased */
+                align-self: start;                                       /* Here we can set each box alignment but we have to off align-content, because while shrinking ofcourse there will be few spaces left in between boxes which had to fix by align-content. */
+
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="box" id="box1">BOX 1</div>
+            <div class="box" id="box2">BOX 2</div>
+            <div class="box" id="box3">BOX 3</div>
+            <div class="box" id="box4">BOX 4 </div>
+
+        </div>
+
+    </body>
+
+</html>
