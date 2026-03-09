@@ -1,117 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        .container{
-            width: 100vw;
-            height: 100vh;
-            background-color: antiquewhite;
-            border: solid black 3px;
-        }
-        .box1{
-            width: 200px;
-            height: 80px;
-            background-color: blue;
-            border-radius: 10px;
-            border: solid yellow 5px;
-            margin: 5px;
-            position: relative;
-            animation-name: rightMovement;
-            animation-duration: 5s;         /* For 5sec it will run/work*/
-            animation-iteration-count: 2;   /* Total it will do for 3 times*/
-            animation-delay: 2s;            /* While staring it will take 2 sec of delay*/
-            /*animation-timing-function: linear;  Means while starting to end it will move with same speed*/
-            /* animation-timing-function: ease-in; Start slow but move in speed.*/
-            /*animation-timing-function: ease-out;  start at speed and end with slow*/
-            /* animation-timing-function: ease-in-out; Star and end with slow but in mid it take speed. */
-             animation-timing-function: cubic-bezier(0, -0.43, 0.7, 0.4); /* We can do this also by cubic bezier*/
 
+<html>
 
-              /*animation-direction: alternate;  The way it started it will end also in same way.*/
-             /*animation-direction: reverse;     Destination to source movement.*/
-             /* animation-direction: alternate-reverse; */
-             /* animation-fill-mode: forwards ;       we can decide what we can do before start and after end , because of forwards it will go and stop at the destination after i'ts cycle end*/
-             /* animation-fill-mode: backwards;     in backwards we can see after it's cycle end it will stop at the source.*/
+    <head>
 
-             animation: 5s linear 1s 3 alternate none running rightMovement; /* duration , animation-timing-function , delay , iteration , direction , fill-mode , play-state , name. This is a short hand notation.*/
-        }
-        @keyframes rightMovement{
-            from{
-                top: 100px;
-                left: 0;
+        <style>
+
+            *{
+
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;                                         /* So that we can maintain our box size, but not essential here. */
+
             }
 
-            to{
-                top: 100px;
-                left: 1200px;
-            }
-        }
-        .box2{
-            width: 200px;
-            height: 80px;
-            background-color: blue;
-            border-radius: 10px;
-            border: solid yellow 5px;
-            margin: 5px;
-            position: relative;
-            animation: 5s ease-in 1s 3 alternate none running leftMovement;
-        }
-        @keyframes leftMovement{
-            from{
-                top: 600px;
-                left: 1200px;
+            .container{
+
+                width: 100vw;
+                height: 100vh;
+                background-color: antiquewhite;
+                border: solid black 3px;
+
             }
 
-            to{
-                top: 600px;
-                left: 0;
-            }
-        }
-        .circle{
-            width: 80px;
-            height: 80px;
-            background-color: blue;
-            border-radius: 50px;
-            border: solid yellow 5px;
-            margin: 5px;
-            position: relative;
-            top: 200px;
-            left: 650px;
-            animation: 5s ease-in 1s 3 alternate none running circleMovement;
-        }
-        @keyframes  circleMovement{
-            0%{
-                top: 1%;
-                left: 5%;
-            }
-            30%{
-                top: 1%;
-                left: 90%;
-            }
-            60%{
-                top: 50%;
-                left: 10%;
-            }
-            100%{
-                top: 55%;
-                left: 90%;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
+            .box1{
 
-       <div class="box1"></div>
+                width: 200px;
+                height: 80px;
+                background-color: blue;
+                border-radius: 10px;
+                border: solid yellow 5px;
+                margin: 5px;
+                position: relative;                                             /* So we can set the points of our elements, whether they should be at top,left,bottom or right. */
+                animation-name: rightMovement;
+                animation-duration: 5s;                                         /* For 5sec it will run/work. */
+                animation-iteration-count: 2;                                   /* Total it will do for 3 times. */
+                animation-delay: 2s;                                            /* While staring it will take 2 sec of delay. */
+                animation-timing-function: linear;                              /* Means while starting to end it will move with same speed. */
+                animation-timing-function: ease-in;                             /* Start slow but move in speed. */
+                animation-timing-function: ease-out;                            /* start at speed but end with slow. */
+                animation-timing-function: ease-in-out;                         /* Starting as well as ending  will be  slow but in mid part it take speed. */
+                animation-timing-function: cubic-bezier(0, -0.43, 0.7, 0.4);    /* We can do this also by cubic bezier. */
 
-       <div class="box2"></div>
 
-       <div class="circle"></div>
-    </div>
-</body>
+                animation-direction: alternate;                                 /* The way it started it will end also in same way. */
+                animation-direction: reverse;                                   /* Destination to source movement only. */
+                animation-direction: alternate-reverse;                         /* Destination to source, then source to destination and so on. */
+                animation-fill-mode: forwards ;                                 /* We can decide what we can do before start and after end , because of forwards it will go and stop at the destination after it's cycle end. */
+                animation-fill-mode: backwards;                                 /* In backwards we can see after it's cycle end it will stop at the source only. */
+
+                animation: 5s linear 1s 3 alternate none running rightMovement; /* duration , animation-timing-function , delay , iteration , direction , fill-mode , play-state , name. This is a short hand notation. */
+
+            }
+            @keyframes rightMovement{
+
+                from{
+
+                    top: 100px;
+                    left: 0;
+
+                }
+
+                to{
+
+                    top: 100px;
+                    left: 1200px;
+
+                }
+
+            }
+
+            .box2{
+
+                width: 200px;
+                height: 80px;
+                background-color: blue;
+                border-radius: 10px;
+                border: solid yellow 5px;
+                margin: 5px;
+                position: relative;
+                animation: 5s ease-in 1s 3 alternate none running leftMovement;
+
+            }
+            @keyframes leftMovement{
+
+                from{
+
+                    top: 600px;
+                    left: 1200px;
+
+                }
+
+                to{
+
+                    top: 600px;
+                    left: 0;
+
+                }
+            }
+
+            .circle{
+
+                width: 80px;
+                height: 80px;
+                background-color: blue;
+                border-radius: 50px;
+                border: solid yellow 5px;
+                margin: 5px;
+                position: relative;
+                top: 200px;
+                left: 650px;
+                animation: 5s ease-in 1s 3 alternate none running circleMovement;
+
+            }
+            @keyframes  circleMovement{
+
+                0%{                                                             /* At starting when animation completed 0% these things mentioned in the block will happen. */
+
+                    top: 1%;
+                    left: 5%;
+
+                }
+
+                30%{                                                            /* At 30% of animation completion these things written in this block will happen. */
+
+                    top: 1%;
+                    left: 90%;
+
+                }
+
+                60%{                                                            /* Similarly goes for this 60%. */
+
+                    top: 50%;
+                    left: 10%;
+
+                }
+
+                100%{                                                           /* And at last 100% completion of the animation these things will happen. */
+
+                    top: 55%;
+                    left: 90%;
+
+                }
+
+            }
+        
+        </style>
+    
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="box1"></div>
+            <div class="box2"></div>
+            <div class="circle"></div>
+   
+        </div>
+
+    </body>
+
 </html>
