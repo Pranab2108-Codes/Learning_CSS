@@ -1,54 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-   <style>
-    :root{
-        --primary-color: brown; /* Now we don't have to create these anymore anywhere.*/
-        --custom-width: 200px;
-    }
-    .container{
-        background-color: aqua;
-        height: 600px;
-        border: solid black 2px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .box{
-        /* --primary-color: brown;     custom variable*/
-        /* --custom-width: 200px;         Here these customm variables can be used only inside of this box*/
-        background-color: blue;
-        width: var(--custom-width);
-        /* width: 200px; */
-        /* height: 200px; */
-        height: var(--custom-width);
-        border: solid var(--primary-color) 2px;
-        padding: 3px;
-        margin: 3px;
-        /*box-shadow: -10px -7px brown; 10px is the x-offset(horizontally move) , 5px is the y-offset(vertically move)*/
 
-       /* box-shadow: 10px 5px 30px brown;  The last one which is 30px is the blurness , there is no -ve blur.*/
-       /* box-shadow: 10px 5px 5px 20px brown;  Blur with spread, here 20px is for spread*/
-       /* box-shadow: inset 10px 15px brown;  inset means shadow movinf towards inside not to outside.*/
+<html>
 
-       box-shadow: 5px 8px var(--primary-color),10px 10px green; 
-    }
-    #head1{
-         /* text-shadow: 5px 10px 15px yellow;  As much as we increase the blur ness it will disappear*/
-        /* text-shadow: 12px 13px 20px green; */
-        /* text-shadow: 10px 12px ; bydefault the shoadow color is black */
-        text-shadow: 2px 3px green, 4px 5px blue, 6px 7px red;      /* Multiple text shadow. */
-    }
-   </style>
-</head>
-<body>
-    <div class="container">
-        <div class="box">
-            <img src="logo.avif" alt="DevOps logo" width="200px" height="200px">
-            <h2 id="head1">Welcome to DevOps Journey.</h2>
-            <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus doloremque ea labore pariatur earum quisquam, eveniet unde eos deserunt perferendis fugiat minus quod. Quod libero officiis quibusdam sint nostrum est illo vitae hic eum autem fugit, nisi provident deserunt amet.</p> -->
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, similique.</p>
+    <head>
+   
+        <style>
+
+            :root{
+
+                --primary-color: brown;                                    /* Now we don't have to create these anymore anywhere because now these variables are "Global" which are made by us. */
+                --custom-width: 200px;                                       /* Variables which are made by us always start with "--". */
+
+            }
+
+            .container{
+
+                background-color: aqua;
+                height: 600px;
+                border: solid black 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .box{
+
+                background-color: blue;
+                width: var(--custom-width);                                /* Here we have to use var() while using the custom variable. */
+                height: var(--custom-width);
+                border: solid var(--primary-color) 2px;
+                padding: 3px;
+                margin: 3px;
+                box-shadow: 10px 7px brown;                              /* 10px is the x-offset(horizontally move) because of +ve it will move towards right, 7px is the y-offset(vertically move) because of +ve it will move towards down. */
+                box-shadow: -10px -5px 30px brown;                       /* Here the x-offset is -10, -ve so it will move towards left, and because of -5px which is -ve in y-offset, the shadow will move towards up, the last one which is 30px is the blurness , there is no -ve blur. */
+                box-shadow: 10px 5px 5px 20px brown;                     /* Blur with spread, here 20px is for spread*/
+                box-shadow: inset 10px 15px 20px 40px greenyellow;       /* inset means shadow moving towards inside not to outside, in above properties the shadow was moving towards outside. */
+                                                                        /* 5px is x-offset, 8px is y-offset, primary-color is brown, 10px is for x-offset again for another shadow, 19px is for y-offset again for that shadow and at last color is blue in this way we can add multiple shadow color in a single time. */
+                box-shadow: 5px 8px 20px var(--primary-color),10px 19px blue;  
+
+            }
+
+            #head1{
+
+                text-shadow: 5px 10px 15px greenyellow;                   /* As much as we increase the blur ness it will disappear the color. */
+                text-shadow: 10px 12px ;                                    /* Bydefault the shoadow color is black. */
+                text-shadow: 2px 3px green, 4px 5px blue, 6px 7px red;/* Multiple color's text shadow. */
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="container">
+        
+            <div class="box">
+
+                <img src="logo.avif" alt="DevOps logo" width="200px" height="200px">
+                <h2 id="head1">Welcome to DevOps Journey.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, similique.</p>
+
+            </div>
+
         </div>
-    </div>
-</body>
+
+    </body>
+        
 </html>
