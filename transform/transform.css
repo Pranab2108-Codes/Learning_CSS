@@ -1,0 +1,43 @@
+.box{
+
+    width: 300px;
+    height: 300px;
+    background-color: beige;
+    border: solid black 4px;
+    display: flex;
+    transition: all 2s linear 1s;                             /* As we know here this short hand notation of transition indicating transition-property, duration, transition-tming function, delay. */
+
+}
+
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box:hover{
+
+    transform: rotate(45deg);                                 /* Rotate of 45 degree in clockwise direction. */
+    background-color: blueviolet;
+    transform: scale(2);                                      /* Increase the size 2 times from it's original size when we hover. */
+    transform: scale(0.8391);                                 /* We can do scale down also. */
+    transform: rotate(-34deg);                                /* Rotate anti clock wise. */
+    transform: skew(45deg);                                   /* Tilt with 45 deg , means towards anti clock wise even when we give +ve value. */
+    transform: skew(-47deg);                                  /* Tilt towards clock wise in -ve value. */
+    transform: translate(500px);                              /* Move towrds right means in x-axis, if we give only 1 para meter bydefault it will take this as x axis. */
+    transform: translate(-200px);                             /* Move towrds left in x-axis. */
+    transform: translate(0,500px);                            /* means here it will move towards down, because we are only giving the +ve value in y-axis. */
+    transform: translate(0,-300px);                           /* Move towards up only, because of -ve value in y-axis. */
+    transform: translate(-400px,350px);                       /* Move in left down corner. */
+
+}
+
+p{
+
+    font-size: 30px;
+
+}
