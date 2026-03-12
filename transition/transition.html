@@ -1,9 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    
+    <style>
+        .box{
+            background-color: beige;         /* These are the normal statements, ofcourse we have to define state through which transition can takes place. */
+            border: solid black 5px;
+            width: 300px;
+            height: 300px;
+            transition-property: width;          /* Transition applying over width only. */
+            transition-property: all;            /* Then color will automatically change to bue but in very slow motion. */
+            transition-duration: 4s;
+            transition-delay: 2s;                /* We can also not use these 4 properties from transition-property to transition-timing-function, but when we hover it will chage the backgriund color very fastly, not in slow motion. */
+            transition-timing-function: linear;  /* start and end with same  speed*/
+            transition-timing-function: ease;    /* start slow , mid speed and then end with slow. */
+            transition-timing-function: ease-in; /* Start slow and end with speed. */
+            transition-timing-function: ease-out;/* Start speed but end with slow*/
+            transition-timing-function: ease-in-out; /* very slow start , mid speed and then very slow end*/
+            transition-timing-function: cubic-bezier(0.57, -0.24, 0.27, 1.32); /* We can also set through cubic bezier. */
+            transition: all 2s 3s ease-in-out;/* Short hand notation Property name , duration, delay, timing-function*/
+            transition: width 2s , height 4s; /* Multiple properties can be also applied, first one is property and next one is for duration.*/
+
+
+        }
+        .box:hover{                             /* pseudo class hover, this is the state where transition will take place. */
+            width: 1200px;                      /* When we will hover the width from 300px to go 1200px, again when we don't hover it will come back normal*/
+            height: 700px;
+            background-color: blue;
+        }
+    </style>
 </head>
 <body>
     
+
+    <div class="box">
+
+    </div>
 </body>
 </html>
