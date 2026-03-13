@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+    
+        <style>
+            
+            *{
+
+                padding: 0;
+                margin:0;
+
+            }
+
+            .container{
+
+                width: 100vw;
+                height: 100vh;
+                background-color: #efb2da;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .card{
+
+                width: 360px;
+                height: 500px;
+                border-radius: 30px;
+                background-color: rgb(241, 156, 125);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+            }
+
+            .card img{
+
+                width: 100%;
+                height: 130px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+            }
+
+            .textBox{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 1.3em;
+                gap: 15px;
+                width: 70%;
+                text-align: center;
+
+            }
+
+            #amountBox{
+
+                width: 80%;
+                height: 20%;
+                background-color: beige ;
+                border-radius: 18px;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding-right: 10px;
+
+            }
+
+            .leftBox{
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-left: 10px;
+                gap: 20px;
+
+            }
+
+            #paymentButton{
+
+                width: 80% ;
+                height: 8%;
+                border: solid blue 2px;
+                background-color: rgb(37, 37, 199);
+                border-radius: 12px;
+                color: azure;
+                box-shadow: 0px 1px 13px  blue;
+
+            }
+
+            .cancelBox a{
+
+                color: rgb(74, 69, 69);
+                text-decoration: none;
+                font-weight:501;
+                font-size: large;
+
+            }
+            
+            .imgBox img{
+
+                width: 60px;
+                height: 60px;
+                border-radius: 30px;
+
+            }
+
+            .leftBox .textAmountBox{
+
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+
+            }
+        
+        </style>
+
+    </head>
+
+    <body>
+   
+        <div class="container">
+        
+            <div class="card">
+            
+                <img src="Codeforces.webp" alt="">
+
+                <div class="textBox">
+                
+                    <h2>Order Summary</h2>
+                    <p>You can buy Merchandise from Codeforces just need to use the Email ID.</p>
+            
+                </div>
+
+                <div id="amountBox">
+                
+                    <div class="leftBox">
+                    
+                        <div class="imgBox">
+                        
+                            <img src="CodeforcesTshirt.webp" alt="" height="30px">
+                    
+                        </div>
+                    
+                        <div class="textAmountBox">
+                            
+                            <p>Amount</p>
+                            <p>$6.2/year</p>
+                    
+                        </div>
+                    </div>
+                
+                    <div class="rightBox">
+                    
+                        <a href="">Change</a>
+                
+                    </div>
+            
+                </div>
+                
+                <button id="paymentButton">Proceed to Payment</button>
+
+                <div class="cancelBox">
+                
+                    <a href="">Cancel Order</a>
+            
+                </div>
+            
+            </div>
+    
+        </div>
+
+    </body>
+    
+</html>
